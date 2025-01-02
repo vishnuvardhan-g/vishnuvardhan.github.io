@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Vishnu's personal website. Explore his journey as a Snowflake Developer, passionate traveler, and content creator.">
+    <title>Vishnu | Developer & Traveler</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const nav = document.querySelector('nav');
+
+            sections.forEach(section => {
+                const navLink = document.createElement('a');
+                navLink.href = `#${section.id}`;
+                navLink.textContent = section.querySelector('h2').textContent;
+                navLink.style.margin = '0 15px';
+                navLink.style.textDecoration = 'none';
+                navLink.style.color = '#4caf50';
+                navLink.style.fontWeight = 'bold';
+                nav.appendChild(navLink);
+            });
+        });
+
+        const projects = [
+            { name: "Reporting Solutions", description: "Designed and developed robust reporting solutions using SQL and PL/SQL." },
+            { name: "Process Optimization", description: "Streamlined processes and improved query performance by 40%." },
+            { name: "Agile Projects", description: "Contributed to Agile projects in the life sciences domain." },
+            { name: "DevOps Support", description: "Supported DevOps and GitLab integrations for seamless delivery pipelines." }
+        ];
+
+        const travelStories = [
+            { title: "Botanical Garden of Kondapur", description: "A tranquil escape into lush greenery." },
+            { title: "Durgam Cheruvu", description: "The secret lake with spectacular views." },
+            { title: "Secunderabad to Vikarabad Train Journey", description: "A picturesque ride through marvelous landscapes." }
+        ];
+
+        function populateProjects() {
+            const projectList = document.querySelector('#portfolio ul');
+            projects.forEach(project => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${project.name}:</strong> ${project.description}`;
+                projectList.appendChild(listItem);
+            });
+        }
+
+        function populateTravelStories() {
+            const travelList = document.querySelector('#travel ul');
+            travelStories.forEach(story => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${story.title}:</strong> ${story.description}`;
+                travelList.appendChild(listItem);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateProjects();
+            populateTravelStories();
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+            color: #333;
+        }
+
+        header {
+            background: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        section h2 {
+            color: #4caf50;
+        }
+
+        section#about {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('personal_info_background.jpg') no-repeat center center/cover;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        section#portfolio {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('data_engineering.jpeg') no-repeat center center/cover;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        section#travel {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('scenic_nature.jpg') no-repeat center center/cover;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #4caf50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .highlight {
+            background: #e3f2fd;
+            padding: 10px;
+            border-left: 4px solid #4caf50;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Vishnu's World</h1>
+        <p>A passionate journey through data, travel, and content creation</p>
+    </header>
+
+    <nav></nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Vishnu, a dedicated Snowflake Developer with 3-7 years of experience in designing, optimizing, and maintaining data solutions. I specialize in SQL Server, ANSI SQL, Oracle, and performance tuning, among other tools and technologies.</p>
+        <p>Beyond my technical career, I'm a passionate traveler and content creator, exploring the beauty of nature and sharing my journey through vlogs and Instagram. I thrive on curiosity, learning, and storytelling.</p>
+
+        <div class="highlight">
+            <p><strong>Core Skills:</strong> Data Warehousing, Snowflake, PL/SQL, Agile Methodology, Life Sciences Domain Knowledge.</p>
+            <p><strong>Soft Skills:</strong> Leadership, Team Collaboration, Communication, Client Coordination.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Professional Portfolio</h2>
+        <p>As a Snowflake Developer, I've been involved in designing complex data solutions and optimizing performance for large-scale projects. Here are a few highlights:</p>
+        <ul></ul>
+    </section>
+
+    <section id="travel">
+        <h2>Travel Adventures</h2>
+        <p>Exploring the wonders of Hyderabad and beyond, I create vlogs capturing scenic beauty, such as:</p>
+        <ul></ul>
+
+        <p>Join me on Instagram and YouTube as I share my travel stories, connecting nature's beauty with the world!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate, explore job opportunities, or simply say hi, feel free to reach out!</p>
+        <p>Email: <a href="mailto:vishnu@example.com">vishnu@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/vishnu">linkedin.com/in/vishnu</a></p>
+        <p>Instagram: <a href="https://instagram.com/vishnu_travels">@vishnu_travels</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vishnu. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
